@@ -117,8 +117,14 @@ public class LoginController {
     }
 
 
-    @RequestMapping("/admin_main.html")
+    @RequestMapping("/1-admin-index.html")
     public ModelAndView toAdminMain(HttpServletResponse response) {
+        return new ModelAndView("1-admin-index");
+    }
+
+    //test
+    @RequestMapping("/admin_main.html")
+    public ModelAndView toAdminMain2(HttpServletResponse response) {
         return new ModelAndView("admin_main");
     }
 
