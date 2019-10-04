@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NWPU图书馆管理系统
 
 
@@ -130,3 +131,6 @@
 <img src="./preview/12.png">
 
 
+=======
+# NWPU_IT_project-master
+>>>>>>> 324ee0136348e8acb6716825abe42b3e4d18f417
