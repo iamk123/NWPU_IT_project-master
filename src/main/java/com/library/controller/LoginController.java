@@ -31,12 +31,18 @@ public class LoginController {
 
 
     @RequestMapping(value = {"/", "/login.html"})
-
-
     public String toLogin(HttpServletRequest request) {
+        request.getSession().invalidate();
+        return "1-index";
+    }
+
+    @RequestMapping(value = {"/test"})
+    public String toLogin2(HttpServletRequest request) {
         request.getSession().invalidate();
         return "index";
     }
+
+
     @RequestMapping(value = {"/testurl", })
     public String toLoginTest(HttpServletRequest request) {
         request.getSession().invalidate();
