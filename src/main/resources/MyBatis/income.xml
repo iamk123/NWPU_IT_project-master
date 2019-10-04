@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.library.dao.IncomeDao">
+
+    <insert id="addIncome" parameterType="com.library.bean.Income">
+        insert into income_list values
+        (null, #{type}, #{readerId}, #{value}, #{date_time},
+       )
+    </insert>
+    <!--parameterType="Date"-->
+    <select id="getDayIncome" resultType="com.library.bean.Income" >
+              select * from income_list where date_time = #{date}
+    </select>
+    <select id="getMonthIncome" resultType="com.library.bean.Income" parameterType="map">
+              select * from income_list   where month(date_time) =#{month} and year(date_time) = #{year};
+    </select>
+    <select id="getYearIncome" resultType="com.library.bean.Income" parameterType="int" >
+              select * from income_list where year(date_time) = #{year}
+    </select>
+
+
+
+</mapper>
